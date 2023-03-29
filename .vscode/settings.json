@@ -1,0 +1,4 @@
+{
+    "nuxt.isNuxtApp": false,
+    "easycode.model": "gpt-4"
+}
