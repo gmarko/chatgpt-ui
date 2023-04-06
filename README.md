@@ -1,3 +1,6 @@
+# ChatGPT UI
+
+```html
 <div align="center">
 <h1>ChatGPT UI</h1>
 </div>
@@ -6,10 +9,10 @@
 
 A ChatGPT web client that supports multiple users, multiple database connections for persistent data storage, supports i18n. Provides Docker images and quick deployment scripts.
 
-https://user-images.githubusercontent.com/46235412/227156264-ca17ab17-999b-414f-ab06-3f75b5235bfe.mp4
-
+<https://user-images.githubusercontent.com/46235412/227156264-ca17ab17-999b-414f-ab06-3f75b5235bfe.mp4>
 
 ## 📢Updates
+
 <details open>
 <summary><strong>2023-03-23</strong></summary>
 Added web search capability to generate more relevant and up-to-date answers from ChatGPT!
@@ -21,7 +24,6 @@ This feature is off by default, you can turn it on in `Chat->Settings` in the ad
 <summary><strong>2023-03-15</strong></summary>
 
 Add "open_registration" setting option in the admin panel to control whether user registration is enabled. You can log in to the admin panel and find this setting option under `Chat->Setting`. The default value of this setting is `True` (allow user registration). If you do not need it, please change it to `False`.
-
 
 </details>
 
@@ -47,13 +49,13 @@ Add 2 environment variables to control the typewriter effect:
 <details>
 
 <summary><strong>2023-02-24</strong></summary>
-Version 2 is a major update that separates the backend functionality as an independent project, hosted at [chatgpt-ui-server](https://github.com/WongSaang/chatgpt-ui-server). 
+Version 2 is a major update that separates the backend functionality as an independent project, hosted at [chatgpt-ui-server](https://github.com/WongSaang/chatgpt-ui-server).
 
 If you still wish to use the old version, please visit the [v1 branch](https://github.com/WongSaang/chatgpt-ui/tree/v1).
 
 </details>
 
-## Version 2 introduces the following new features:
+## Version 2 introduces the following new features
 
 - 😉 Separation of the frontend and backend, with the backend now using the Python-based Django framework.
 - 😘 User authentication, supporting multiple users.
@@ -68,10 +70,10 @@ Note: This script has only been tested on Ubuntu Server 22.04 LTS.
 bash <(curl -Ls https://raw.githubusercontent.com/WongSaang/chatgpt-ui/main/deployment.sh)
 ```
 
-> If you have a domain name, you can point it to the server's IP address using DNS resolution. Of course, using the server's IP address directly is also possible. 
+> If you have a domain name, you can point it to the server's IP address using DNS resolution. Of course, using the server's IP address directly is also possible.
 > During the script's execution, you will be prompted to enter a domain name. If you do not have a domain name, you can enter the server's IP address directly.
 
-### After the deployment is complete
+## After the deployment is complete
 
 Access `http(s)://your.domain:9000/admin` / IP `http(s)://123.123.123.123:9000/admin` to log in to the administration panel.
 
@@ -152,7 +154,6 @@ networks:
 | MySQL                | ``mysql://USER:PASSWORD@HOST:PORT/NAME``         |
 | SQLite               | ``sqlite:///PATH``                               |
 
-
 ### Set API key
 
 Access `http(s)://your.domain:9000/admin` / IP `http(s)://123.123.123.123:9000/admin` to log in to the administration panel.
@@ -167,10 +168,11 @@ Now you can access the web client at `http(s)://your.domain` or `http://123.123.
 
 ## Donation
 
-> If it is helpful to you, it is also helping me. 
+> If it is helpful to you, it is also helping me.
 
 If you want to support me, Buy me a coffee ❤️ [https://www.buymeacoffee.com/WongSaang](https://www.buymeacoffee.com/WongSaang)
 
+```html
 <p align="center">
   <img height="150" src="https://github.com/WongSaang/chatgpt-ui/blob/main/demos/bmc_qr.png?raw=true"/>
 </p>
@@ -188,7 +190,7 @@ yarn install
 
 ### Development Server
 
-Start the development server on http://localhost:3000
+Start the development server on <http://localhost:3000>
 
 ```bash
 yarn dev

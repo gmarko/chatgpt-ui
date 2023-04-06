@@ -22,7 +22,11 @@
             <v-row>
               <v-col>
                 <div class="d-flex flex-column align-center">
-                  <v-icon icon="sunny"></v-icon>
+                  <v-icon
+      size="large"
+      color="green-darken-2"
+      icon="domain"
+    ></v-icon>
                   <h3 class="text-h6">{{ $t('welcomeScreen.examples.title') }}</h3>
                 </div>
               </v-col>

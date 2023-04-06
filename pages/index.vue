@@ -1,10 +1,10 @@
 <script setup>
 import Prompt from "~/components/Prompt.vue";
+import {EventStreamContentType, fetchEventSource} from '@microsoft/fetch-event-source'
 
 definePageMeta({
   middleware: ["auth"]
 })
-import {EventStreamContentType, fetchEventSource} from '@microsoft/fetch-event-source'
 
 const { $i18n, $auth } = useNuxtApp()
 const runtimeConfig = useRuntimeConfig()
