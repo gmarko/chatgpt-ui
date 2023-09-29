@@ -1,12 +1,11 @@
-
 // export const useModels = () => useState('models', () => getStoredModels())
 
 export const useCurrentModel = () => useState('currentModel', () => getCurrentModel())
 
 export const useApiKey = () => useState('apiKey', () => getStoredApiKey())
 
-export const useConversion = () => useState('conversion', () => getDefaultConversionData())
+export const useConversations = () => useState('conversations', () => [])
 
-export const useConversions = () => useState('conversions', () => [])
+export const useUser = () => useState('user', () => null)
 
-export const useSettings = () => useState('settings', () => {})
+export const useDrawer = () => useState('drawer', () => false)

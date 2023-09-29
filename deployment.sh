@@ -24,6 +24,13 @@ if [ -z "$WSGI_PORT" ]; then
   WSGI_PORT="8000"
 fi
 
+read -p "If you want to connect to a database, please enter the database URL [default: none]: " DATABASE_URL
+
+if [ -z "$DATABASE_URL" ]; then
+  DATABASE_URL="sqlite:///db.sqlite3"
+fi
+
+
 if [[ $(which docker) ]]; then
     echo "Docker is already installed"
 else
@@ -61,10 +68,15 @@ fi
 
 echo "Downloading configuration files..."
 
-sudo curl -L "https://raw.githubusercontent.com/WongSaang/chatgpt-ui/main/docker-compose.yml" -o docker-compose.yml
+# if docker-compose.yml doesn't exist, download it
+if [ ! -f "docker-compose.yml" ]; then
+    sudo curl -L "https://raw.githubusercontent.com/WongSaang/chatgpt-ui/main/docker-compose.yml" -o docker-compose.yml
+fi
 
 echo "Starting services..."
 
-sudo APP_DOMAIN="${APP_DOMAIN}:${SERVER_PORT}" CLIENT_PORT=${CLIENT_PORT} SERVER_PORT=${SERVER_PORT} WSGI_PORT=${WSGI_PORT}  docker-compose up --pull always -d
+touch ./db_sqlite3/db.sqlite3
+
+sudo APP_DOMAIN="${APP_DOMAIN}:${SERVER_PORT}" CLIENT_PORT=${CLIENT_PORT} SERVER_PORT=${SERVER_PORT} WSGI_PORT=${WSGI_PORT} DB_URL=${DATABASE_URL}  docker-compose up -d
 
 echo "Done"
